@@ -1,0 +1,352 @@
+.nav-link{
+  font-family: 'Courier New', monospace;
+  font-weight:bold;
+}
+
+.header {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size:40px;
+  color: #fff;
+  text-decoration: underline overline;
+}
+
+.header:hover{
+  font-size:45px;
+}
+
+.nav-link:hover{
+  font-size: 20px;
+}
+
+
+li a {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+main{
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    /* Center contents */
+    text-align: center;
+}
+
+.row{
+    text-align: center;
+}
+
+.apology-text{
+  font-weight:bold;
+}
+
+.apology-img{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: left;
+}
+
+.giving-ask{
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline 1px;
+  background-color: #81c7d4;
+}
+
+.information-header{
+  font-size: 30px;
+  font-weight: bold;
+  color: #0b346e;
+}
+
+.information-col{
+  border-left-style: solid;
+}
+
+.information-data{
+  text-align: left;
+}
+
+.information-img{
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 40%; 
+  height: auto;
+}
+
+.request-mess{
+  font-size: 20px;
+  font-weight: bold;
+  color: #0089a7;
+}
+
+.notification-div{
+  background-color: #a5dde4;
+}
+
+.notification-div:hover{
+    border-style: solid 2px;
+    border-color: #000;
+}
+
+.notification-res{
+  background-color: #a3bfdb;
+}
+
+.notification-res:hover{
+  border: solid 2px;
+  border-color: #c8d9ea;
+}
+
+.notification-mess{
+  text-align: left;
+  padding: 15px;
+}
+
+.noti-res{
+  color:#000;
+}
+
+.notification-data{
+  font-weight:bold;
+  color: #0000ff;
+}
+
+.noti-user{
+  text-decoration: underline;
+}
+
+.noti-mess{
+  font-style: italic;
+}
+
+.notification-data-res{
+  font-weight:bold;
+  color: #113285;
+}
+
+
+.history-donate{
+  background-color: #99ccff;
+}
+
+.history-gave{
+  background-color: #4da6ff;
+  color: #fff;
+}
+
+.history-request{
+  background-color: #0073e6;
+  color: white;
+}
+
+.history-recieved{
+  color: #fff;
+  background-color: #004d99;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.blog-container{
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.others{
+  text-align: left;
+  float: left;
+  width: 80%;
+  color: #4d4dff;
+  background-color: white;
+}
+
+.user{
+  text-align: right;
+  float: right;
+  width: 80%;
+  background-color: #4d4dff;
+  color: white;
+}
+
+.open-button {
+  background-color: #6188ea;
+  font-weight: bold;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.blogs-form-container {
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.blogs-form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.blogs-form-container textarea:focus {
+  background-color: #d8f0f3;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.blogs-form-container .btn {
+  background-color: #5e814f;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+
+}
+
+/* Add a red background color to the cancel button */
+.blogs-form-container .cancel {
+  background-color: #c5692e;
+}
+
+/* Add some hover effects to buttons */
+.blogs-form-container .btn:hover, .open-button:hover {
+  border: solid 2px black;
+  
+}
+
+
+.index-image{
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.img1{
+    float: left;
+    width: 35%;
+    height: auto;
+}
+
+.img2{
+    float: right;
+    width: 33%;
+    height: auto;
+}
+
+.img3{
+  float: left;
+  width: 35%;
+  height:auto;
+}
+
+.index-data{
+    overflow: auto;
+    border: solid;
+    border-color: #fff;
+    border-width: 10px;
+    padding: 15px 25px 20px 25px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+}
+
+.index-1prg{
+  text-align: right;
+  border-right: solid 2px;
+}
+
+.index-2prg{
+  text-align: left;
+  border-left: solid 2px;
+}
+
+.index-3prg{
+  text-align: left;
+  border-right: solid 2px;
+}
+.index-header{
+    text-align: center;
+    color: #11324D;
+    border-style: solid;
+    border-width: thin;
+    border-color: #000;
+    font-size: 150%;
+    padding: 10px 0px 0px 0px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+}
+
+.in-h1{
+  background-color:#99ccff;
+}
+
+.in-h2{
+  background-color:#8080ff;
+  color:white;
+}
+
+.in-h3{
+  background-color: #80ccff;
+}
