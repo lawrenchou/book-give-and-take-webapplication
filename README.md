@@ -5,7 +5,7 @@
 #### Description: 
 #### This web application is a platform for people to locally give and recieve books from others. 
 
-##### 1. appication.py
+### 1. appication.py
 ###### - This is where almost my code goes. I'm going to mention only the important function down below. 
 
 **login and logout** is to let user login by providing username and password via a simple form and remember which user have logged in. 
@@ -39,11 +39,11 @@ There are 4 main actions is Donated (means user posted their book on the platfor
 
 **account** is where user can keep track of what book(s) he/she has posted, also his/her information
 
-##### 2. helpers.py
+### 2. helpers.py
 
 **function login_required(f)** to make sure only who has login (by providing username and password) have ability to access to all the information
 
-##### 3. project.db
+### 3. project.db
 
 **basic and personal** are tables used to store users's information.
 
@@ -55,10 +55,10 @@ There are 4 main actions is Donated (means user posted their book on the platfor
 
 **blogs** is the table used to store all the things users have shared. 
 
-##### 4. /templates
+### 4. /templates
 
 this folder contains all the HTML templates used in the web application. 
 
-##### 5. /static
+### 5. /static
 
 this folder contains images and CSS file. 
