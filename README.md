@@ -12,7 +12,7 @@
 
 ** logout ** remembering which user have log themselves out of the webpage.
 
-** register ** is the route used to display the register form and check whether user provide enough information or not
+**register** is the route used to display the register form and check whether user provide enough information or not
 It also handles storing user's information into the database.
 
 ** giving ** giving is the route that requiring neccesary information from users whenever they giving their books via a form, 
