@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Blogs
+{% endblock %}
+
+{% block main %}
+    <br>
+    <br>
+    {% for blog in blogs %}
+        {% if blog['user_id'] == session.user_id %}
+            <div class="blog-container user">
+                <div style="line-height: 0.5">
+                    <p>@me</p>
+                    <p><span style="text-decoration: underline 1px">Datetime</span>: {{ blog['datetime'] }}</p>
+                </div>
+                <br>
+                <p style="font-style: italic; font-weight: bold">{{ blog['shares'] }}</p>
+            </div>
+        {% else %}
+            <div class="blog-container others">
+                <div style="line-height: 0.5">
+                    <p><span style="text-decoration: underline 1px">Username</span>: @<span>{{ blog['username'] }}</span></p>
+                    <p><span style="text-decoration: underline 1px">Datetime</span>: {{ blog['datetime'] }}</p>
+                </div>
+                <br>
+                <p style="font-style: italic; font-weight: bold">{{ blog['shares'] }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+    
+    <button class="open-button" onclick="openForm()">Share something?</button>
+    <div class="chat-popup" id="myForm">
+        <form action="/blogs" method="post" class="blogs-form-container">
+            <h1>Sharing</h1>
+            <textarea placeholder="Type message.." name="share" required></textarea>
+            <button type="submit" class="btn" value=>Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    
+    <script>
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+{% endblock %}

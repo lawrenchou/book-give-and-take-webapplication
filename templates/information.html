@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Information
+{% endblock %}
+
+{% block main %}
+    <br>
+    <br>
+    <div class="row">
+        <img class="information-img" src="{{ book_info['bookphoto'] }}" alt="Photo of Book">
+    </div>
+    <br>
+    <div class="row">
+        <div class="col information-col">
+            <div class="row information-data">
+                <div class="col">
+                    <p class="information-header">Book Information</p>
+                </div>
+            </div>
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Bookname</p>
+                </div>
+                <div class="col">
+                    <p>{{ book_info['bookname'] }}</p>
+                </div>
+            </div>
+
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Author</p>
+                </div>
+                <div class="col">
+                    <p>{{ book_info['author'] }}</p>
+                </div>
+            </div>
+
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Genres</p>
+                </div>
+                <div class="col">
+                    <p>{{ book_info['genres'] }}</p>
+                </div>
+            </div>
+
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Language</p>
+                </div>
+                <div class="col">
+                    <p>{{ book_info['language'] }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col information-col">
+            <div class="row information-data">
+                <div class="col">
+                    <p class="information-header">Giver</p>
+                </div>
+            </div>
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Name</p>
+                </div>
+                <div class="col">
+                    <p><span>{{ giver['first_name'] }}</span>&nbsp;<span>{{ giver['last_name'] }}</span></p>
+                </div>
+            </div>
+
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Author</p>
+                </div>
+                <div class="col">
+                    <p>{{ giver['location'] }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <p style="font-weight: bold; color:#0b346e">You want to receive it?</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+                <form class="form-group" action="/request" method="post">
+                    <button class="btn btn-primary" type="submit" name="book_id" value="{{ book_info['id'] }}">Send your request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class='col'>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <input style="font-family: 'Courier New', monospace" class="form" name="username" autocomplete="off" autofocus  placeholder="Username" type="text">
+                </div>
+                <div class="form-group">
+                    <input class="form" name="password" placeholder="Password" type="password">
+                </div>
+                <button class="btn btn-primary" type="submit">Login</button>
+                <br>
+                
+                
+            </form>
+            <br>
+            <p style="font-family: 'Courier New', monospace">You didn't have an account? <a href="/register">Register Now</a></p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+
+{% block main %}
+    <div class="row">
+        <div class="col information-col">
+            <div class="row information-data">
+                <div class="col">
+                    <p class="information-header">User Information</p>
+                </div>
+            </div>
+            
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Full Name</p>
+                </div>
+                <div class="col">
+                    <p><span>{{ user_info['first_name'] }}</span>&nbsp;<span>{{ user_info['last_name'] }}</span></p>
+                </div>
+            </div>
+
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Username</p>
+                </div>
+                <div class="col">
+                    <p>{{ user_basic['username'] }}</p>
+                </div>
+            </div>
+
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Email Address</p>
+                </div>
+                <div class="col">
+                    <p>{{ user_basic['email'] }}</p>
+                </div>
+            </div>
+
+            <div class="row information-data">
+                <div class="col">
+                    <p style="font-weight: bold">Location</p>
+                </div>
+                <div class="col">
+                    <p>{{ user_info['location'] }}</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col information-col">
+            <div class="row information-data">
+                <div class="col">
+                    <p class="information-header">Your Available Book</p>
+                </div>
+            </div>
+            {% for book in book_info %}
+                <div class="row information-data">
+                    <div class="col">
+                        <p><span style="font-weight: bold">{{ book['bookname'] }}</span> - <span>{{ book['author'] }}</span></p>
+                    </div>
+                </div>
+            {% endfor %} 
+        </div>
+    </div>
+    <br>
+{% endblock %}

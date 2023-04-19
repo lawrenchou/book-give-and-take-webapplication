@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Request Form
+{% endblock %}
+
+{% block main %}
+    <script>
+
+        function response(){
+            alert('Your request has been sent, you will recieve the response in the next few days. Wish you best of luck');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').addEventListener('submit', response);
+        });
+
+    </script>
+
+    <div class="row">
+        <div class="col">
+            <form action="/storing-message" method="post" onsubmit="response()" return='false'>
+                <div class="form-group">
+                    
+                    <p class="request-mess">Say something to giver: </p>
+                    <textarea style="background-color: #a5dde8" type="text" autocomplete="off" rows="4" cols="50" name="request-text" placeholder="Say something"></textarea>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-primary" type="submit" name="message" value="{{ book_id }}">Sent My Message To Him/Her</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

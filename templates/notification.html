@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Notification
+{% endblock %}
+
+{% block main %}
+    <br>
+    <br>
+    {% for notification in notifications %}
+        {% if notification['action']=="ask for" %}
+            <div class="notification-div">
+                <div class="notification-mess">
+                    <p>User <span class="notification-data noti-user">{{ notification['sender'] }}</span>
+                        want to recieve your <span class="notification-data noti-book">{{ notification['bookname'] }}</span> book</p>
+                    {% if notification['message'] != '' %}
+                        <p>His/her message: <span class="notification-data noti-mess">"{{ notification['message'] }}"</span></p>
+                    {% endif %}
+                        
+                </div>
+                <div class="notification-mess">
+                    <form class="form-group" action="/notification" method="post">
+                        <button style="background-color: #0089a7; border-color: #33a6b8" type="submit" class="btn btn-primary" name="accept" value="{{ notification['id'] }}">Accept</button>
+                        <button style="background-color: #c5692e; border-color: #c5692e" type="submit" class="btn btn-primary" name="deny" value="{{ notification['id'] }}">Deny</button>
+                    </form> 
+                </div>
+            </div>
+        {% else %}
+            <div class="notification-res">
+                <div class="notification-mess noti-res">
+                    <p>User <span class="notification-data-res noti-user">{{ notification['sender'] }}</span>
+                        accept your request for their 
+                        <span class="notification-data-res noti-book">{{ notification['bookname'] }} </span>book</p>
+                    <p class="notification-data-res noti-mess">Hope you enjoy your reading! </p>
+                </div>
+                <div class="notification-mess noti-res">
+                    <form class="form-group" action="/notification" method="post">
+                        <button type="submit" class="btn btn-primary" name="getit" value="{{ notification['id'] }}">Get it</button>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+        <br>
+    {% endfor %}
+{% endblock %}

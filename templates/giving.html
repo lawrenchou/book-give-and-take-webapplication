@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Giving
+{% endblock %}
+
+{% block main %}
+    <form action="/giving" method="post">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <p class="giving-ask">Book Name:</p>
+                    <input class='giving-input' type="text" name="bookname" autocomplete="off" placeholder="Book Name">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <p class="giving-ask">Author Name:</p>
+                    <input class='giving-input' type="text" name="author" autocomplete="off" placeholder="Author">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <p class="giving-ask">Language:</p>
+                    <input class='giving-input' type="text" name="language" autocomplete="off" placeholder="Language">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <p class="giving-ask">Book Photo:</p>
+                    <input class='giving-input' type="text" name="img-source" autocomplete="off" placeholder="Image-Source">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <p class="giving-ask">Genres:</p>
+                    <select class='giving-input' name="genres">
+                        <option disabled selected value="">Genres</option>
+                            {% for genre in genres %}
+                                <option value="{{ genre }}">{{ genre }}</option>
+                            {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <p class="giving-ask">Password:</p>
+                    <input class='giving-input' type="password" name="confirm" autocomplete="off" placeholder="Confirmation">
+                </div>
+            </div>
+        </div>
+                <button class="btn btn-primary" type="submit">Giving</button>
+            </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Gallery
+{% endblock %}
+
+{% block main %}
+    <br>
+    <br>
+    {% for book in books %}
+        {% if book['user_id'] != session.user_id %}
+            <div class="gallery">
+                <a target="_blank">
+                    <img src="{{ book['bookphoto'] }}" alt="Photo of Book" style="width: 50%; height: auto">
+                </a>
+                <div class="desc">
+                    <p><span style="font-weight: bold">Name</span>: {{ book['bookname'] }}</p>
+                    <p><span style="font-weight: bold">Author</span>: {{ book['author'] }}</p>
+                    <p><span style="font-weight: bold">Language</span>: {{ book['language'] }}</p>
+                </div>
+                <form class="form-group" action="/gallery" method="post">
+                    <button class="btn btn-primary" type="submit" name="book_id" value="{{ book['id'] }}">Learn More</button>
+                </form>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

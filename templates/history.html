@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"> Action </th>
+                <th scope="col"> To </th>
+                <th scope="col"> From </th>
+                <th scope="col"> Bookname </th>
+                <th scope="col"> Datetime </th>
+            </tr>
+        </thead>
+        <tbody>
+             {% for transaction in history %}
+                {% if transaction['action'] == 'posted' %}
+                    <tr class="history-donate">
+                        <td>Donated</td>
+                        <td></td>
+                        <td></td>
+                        <td>{{ transaction['bookname'] }}</td>
+                        <td>{{ transaction['datetime'] }}</td>
+                    </tr>
+                {% endif %}
+                {% if transaction['action'] == 'request' %}
+                    <tr class="history-request">
+                        <td>Requested</td>
+                        <td>{{ transaction['reciever'] }}</td>
+                        <td></td>
+                        <td>{{ transaction['bookname'] }}</td>
+                        <td>{{ transaction['datetime'] }}</td>
+                    </tr>
+                {% endif %}
+                {% if transaction['action'] == 'gave' %}
+                    <tr class="history-gave">
+                        <td>Gave</td>
+                        <td>{{ transaction['reciever'] }}</td>
+                        <td></td>
+                        <td>{{ transaction['bookname'] }}</td>
+                        <td>{{ transaction['datetime'] }}</td>
+                    </tr>
+                {% endif %}
+                {% if transaction['action'] == 'got' %}
+                    <tr class="history-recieved">
+                        <td>Recieved</td>
+                        <td></td>
+                        <td>{{ transaction['giver'] }}</td>
+                        <td>{{ transaction['bookname'] }}</td>
+                        <td>{{ transaction['datetime'] }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
