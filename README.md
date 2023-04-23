@@ -1,4 +1,4 @@
-# BOOK GIVE AND TAKE WEBSITE PROJECT
+# BOOK GIVE AND TAKE WEB APPLICATION
 
 ##### Video Demo: https://youtu.be/3nADO4Yjd88
 
